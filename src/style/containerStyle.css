@@ -7,11 +7,11 @@
 }
 .left-container{
     width: 31%;
+    min-width: 31%;
     margin-right: 20px;
     background-color: rgba(255, 255, 255, 0.01);
-    border-right: 1px solid #eeeeee33;
 }
 .right-container{
     flex-grow: 1;
-    padding: 5px 50px;
+    padding: 0px 50px;
 }

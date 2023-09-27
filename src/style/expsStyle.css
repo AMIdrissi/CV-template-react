@@ -1,0 +1,14 @@
+.exp{
+    margin: 40px 50px;
+}
+
+.exp-title{
+    margin: 10px 0px 10px -30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.exp-description{
+    font-size: 18px;
+    margin-left: 30px;
+}
