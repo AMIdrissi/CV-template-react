@@ -1,7 +1,7 @@
-import SingleexpBox from "./SingleexpBox";
-import Experiences from "./exps";
+import SingleexpBox from "./skillBox";
+import Experiences from "./experinces";
 
-function Skill_ExpConatiner({ListL=[] , ListR=[], setLeftindex, setRightindex, Leftindex=0, Rightindex=0 , Ltitle , Rtitle}){
+function GenericConatiner({ListL=[] , ListR=[], setLeftindex, setRightindex, Leftindex=0, Rightindex=0 , Ltitle , Rtitle}){
     return (
         <div className='wrapper'>
                     <div key="skills" className="left-container" onClick={(e)=>{e.currentTarget.add} }>
@@ -33,4 +33,4 @@ function Skill_ExpConatiner({ListL=[] , ListR=[], setLeftindex, setRightindex, L
 }
 
 
-export default Skill_ExpConatiner;
+export default GenericConatiner;

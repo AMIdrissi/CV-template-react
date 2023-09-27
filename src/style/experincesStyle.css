@@ -1,5 +1,10 @@
 .exp{
     margin: 40px 50px;
+    display: flex;
+    align-items: center;
+}
+.exp > *{
+    margin: 0px 10px;
 }
 
 .exp-title{

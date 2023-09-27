@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import CVinfos from './CVinfo';
-import SingleexpBox from './SingleexpBox';
+import SingleexpBox from './skillBox';
 import ProfilPic from './profilPic';
 import './style/containerStyle.css'
-import Experiences from './exps';
-import Skill_ExpConatiner from './Skill_ExpConatiner';
+import Experiences from './experinces';
+import GenericConatiner from './GenericConatiner';
 
 ProfilPic.defaultProps = {
     path:"https://cdn.discordapp.com/attachments/1092253246812332112/1129231426798235648/1689300143433.jpg"
@@ -34,7 +34,6 @@ const k= experiences.length;
 function Container() {
     const [skillList , setSkillList] = useState(skills);
     const [langlList , setLanglList] = useState(languages);
-    const [expList , setExpList] = useState()
     const [index , setIndex] = useState(i+1);
     const [jndex , setJndex] = useState(j+1);
     const [kndex , setKndex] = useState(k+1);
@@ -48,8 +47,8 @@ function Container() {
                         <CVinfos/>
                     </div>
                 </div>
-                <Skill_ExpConatiner ListL={skillList} ListR={experiences} Leftindex={index} Rightindex={kndex} setLeftindex={setIndex} setRightindex={setKndex} Ltitle={"Skills"} Rtitle={"Job Experience"} />
-                <Skill_ExpConatiner ListL={langlList} Leftindex={jndex} setLeftindex={setJndex} Ltitle={"Languages"} Rtitle={"Education"} />    
+                <GenericConatiner ListL={skillList} ListR={experiences} Leftindex={index} Rightindex={kndex} setLeftindex={setIndex} setRightindex={setKndex} Ltitle={"Skills"} Rtitle={"Job Experience"} />
+                <GenericConatiner ListL={langlList} Leftindex={jndex} setLeftindex={setJndex} Ltitle={"Languages"} Rtitle={"Education"} />    
             </div>
 }
 
