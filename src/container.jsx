@@ -4,6 +4,7 @@ import SingleexpBox from './SingleexpBox';
 import ProfilPic from './profilPic';
 import './style/containerStyle.css'
 import Experiences from './exps';
+import Skill_ExpConatiner from './Skill_ExpConatiner';
 
 ProfilPic.defaultProps = {
     path:"https://cdn.discordapp.com/attachments/1092253246812332112/1129231426798235648/1689300143433.jpg"
@@ -20,15 +21,23 @@ const languages = [
                     <SingleexpBox Name='French'  key={"2a"}/>,
                     <SingleexpBox Name='English' key={"3a"}/>,
                   ]
+const experiences = [
+                    <Experiences key={"1b"}/>,
+                    <Experiences key={"2b"}/>,
+                    <Experiences key={"3b"}/>,
+                    ]
 
-const i=skills.length;
+const i= skills.length;
 const j= languages.length;
+const k= experiences.length;
 
 function Container() {
     const [skillList , setSkillList] = useState(skills);
     const [langlList , setLanglList] = useState(languages);
-    const [index , setIndex] = useState(i+1)
-    const [jndex , setJndex] = useState(j+1)
+    const [expList , setExpList] = useState()
+    const [index , setIndex] = useState(i+1);
+    const [jndex , setJndex] = useState(j+1);
+    const [kndex , setKndex] = useState(k+1);
 
     return <div className="main-container">
                 <div className='wrapper'>
@@ -39,57 +48,8 @@ function Container() {
                         <CVinfos/>
                     </div>
                 </div>
-                <div className='wrapper'>
-                    <div key="skills" className="left-container" onClick={(e)=>{e.currentTarget.add} }>
-                        <div style={{textAlign:"center"}}>
-                            <h2 style={{fontSize:"32px", margin:"0px 28px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>Skills</h2>
-                        </div>
-
-                            {
-                            (skillList).map((skill) => {
-                                    return skill;
-                                }
-                            )}
-
-                        <div style={{display:'flex',justifyContent:'center',margin:"20px 0px"}}>
-                            <button style={{backgroundColor:"#228f38" , fontSize:"21px" , fontWeight:"bold"}} onClick={() => {setIndex(index+1);skillList.push(<SingleexpBox key={index}/>);}}>+</button>
-                        </div>
-                    </div>
-                    <div className="right-container">
-                        <div style={{textAlign:"center"}}>
-                            <h2 style={{fontSize:"32px", margin:"0px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>Job experience</h2>
-                        </div>
-                        <Experiences/>
-                        <Experiences/>
-                        <Experiences/>
-                        
-                    </div>
-                </div>
-
-                <div className='wrapper'>
-                    <div className='left-container'>
-                        <div style={{textAlign:"center"}}>
-                            <h2 style={{fontSize:"32px", margin:"0px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>Languages</h2>
-                        </div>
-                            {
-                            (langlList).map((lang) => {
-                                    return lang;
-                                }
-                            )}
-                        <div style={{display:'flex',justifyContent:'center',margin:"20px 0px"}}>
-                            <button style={{backgroundColor:"#228f38" , fontSize:"21px" , fontWeight:"bold"}} onClick={() => {setJndex(jndex+1);langlList.push(<SingleexpBox key={jndex+"a"}/>);}}>+</button>
-                        </div>
-                    </div>
-                    <div className='right-container'>
-
-                    </div>
-                </div>
-                    <div style={{textAlign:"center"}}>
-                            <h2 style={{fontSize:"32px", margin:"0px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>Education</h2>
-                        </div>
-                        <div style={{textAlign:"center"}}>
-                            <h2 style={{fontSize:"32px", margin:"0px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>Education</h2>
-                        </div>
+                <Skill_ExpConatiner ListL={skillList} ListR={experiences} Leftindex={index} Rightindex={kndex} setLeftindex={setIndex} setRightindex={setKndex} Ltitle={"Skills"} Rtitle={"Job Experience"} />
+                <Skill_ExpConatiner ListL={langlList} Leftindex={jndex} setLeftindex={setJndex} Ltitle={"Languages"} Rtitle={"Education"} />    
             </div>
 }
 

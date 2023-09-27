@@ -16,3 +16,8 @@
     flex-grow: 1;
     padding: 20px 50px;
 }
+.addBtn{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
