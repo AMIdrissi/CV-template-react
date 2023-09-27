@@ -1,0 +1,31 @@
+.progress-wrapper{
+    margin: 10px 30px;
+    display: flex;
+    align-items: center;
+}
+.Btns{
+    align-self:flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    margin-left: 20px;
+}
+.Btns > *{
+    margin: 2px;
+    padding: 10px;
+    display: flex;
+}
+.progress{
+    flex-grow: 1;
+}
+.progress-cont{
+    height: 20px;
+    background-color: rgba(240, 248, 255, 0.132);
+    border-radius: 2px;
+}
+.inner-progress-cont{
+    height: 20px;
+    background-color: rgba(32, 229, 255, 0.862);
+    border-radius: 2px;
+}

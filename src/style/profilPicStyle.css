@@ -1,0 +1,47 @@
+.pfpBox img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius:50% ;
+}
+.pfpBox img:hover{
+    cursor: pointer;
+    opacity: 0.6;
+    z-index: -4;
+}
+.pfp p {
+    position: absolute;
+    align-self: center;
+    font-size: 23px;
+    z-index: -1;
+    color: white;
+}
+
+
+.pfpBox{
+    height: 150px;
+    width: 150px;
+    border-radius:50% ;
+    background-color: #22222200;
+    border: 2px solid whitesmoke;
+}
+.pfpBox:hover{
+    background-color: rgba(105, 105, 105, 0.261);
+    cursor: pointer;
+}
+.pfp{
+    display: flex;
+    justify-content: center;
+}
+
+.pfpConatiner{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+#pfpBtn:focus {
+    border: 0px;
+}
