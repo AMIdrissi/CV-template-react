@@ -2,22 +2,3 @@
     height: 100%;
     flex-grow: 1;
 }
-.wrapper{
-    display: flex;
-}
-.left-container{
-    width: 31%;
-    min-width: 31%;
-    margin-right: 20px;
-    background-color: rgba(255, 255, 255, 0.01);
-    padding: 20px 0px;
-}
-.right-container{
-    flex-grow: 1;
-    padding: 20px 50px;
-}
-.addBtn{
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-}

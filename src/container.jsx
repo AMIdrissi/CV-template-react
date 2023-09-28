@@ -26,10 +26,21 @@ const experiences = [
                     <Experiences key={"2b"}/>,
                     <Experiences key={"3b"}/>,
                     ]
+                
+const educations = [
+                    <Experiences key={"1c"}/>,
+                    <Experiences key={"2c"}/>,
+                    <Experiences key={"3c"}/>,
+                    ]
+const hobbies = [
+    <SingleexpBox Name='Photography' key={"1d2"}/>,
+    <SingleexpBox Name='Basketball'  key={"2d2"}/>,
+  ]
 
 const i= skills.length;
 const j= languages.length;
 const k= experiences.length;
+const l= educations.length;
 
 function Container() {
     const [skillList , setSkillList] = useState(skills);
@@ -37,6 +48,7 @@ function Container() {
     const [index , setIndex] = useState(i+1);
     const [jndex , setJndex] = useState(j+1);
     const [kndex , setKndex] = useState(k+1);
+    const [lndex , setLndex] = useState(l+1);
 
     return <div className="main-container">
                 <div className='wrapper'>
@@ -47,8 +59,9 @@ function Container() {
                         <CVinfos/>
                     </div>
                 </div>
-                <GenericConatiner ListL={skillList} ListR={experiences} Leftindex={index} Rightindex={kndex} setLeftindex={setIndex} setRightindex={setKndex} Ltitle={"Skills"} Rtitle={"Job Experience"} />
-                <GenericConatiner ListL={langlList} Leftindex={jndex} setLeftindex={setJndex} Ltitle={"Languages"} Rtitle={"Education"} />    
+                <GenericConatiner ListL={skillList} ListR={experiences} Leftindex={index} Rightindex={kndex} setLeftindex={setIndex} setRightindex={setKndex} Ltitle={"Skills"} Rtitle={"Job Experience"} key1spec={"a"} key2spec={"b"} />
+                <GenericConatiner ListL={langlList} ListL2={hobbies} ListR={educations} Leftindex={jndex} Rightindex={lndex} setLeftindex={setJndex} setRightindex={setLndex} Ltitle={"Languages"} Rtitle={"Education"} key1spec={"c"} key2spec={"d"} _2ndLContainer={true}/>
+                <div style={{marginBottom:"30px"}}></div>
             </div>
 }
 

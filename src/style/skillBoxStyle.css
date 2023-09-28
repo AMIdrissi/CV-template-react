@@ -13,19 +13,36 @@
 }
 .Btns > *{
     margin: 2px;
-    padding: 10px;
+    padding: 12px;
     display: flex;
+}
+.skill-title{
+    font-size: 22px;
+}
+#skill-tittle-input{
+    margin:20px 0px;
+    font-size:22px;
+    font-weight:"bold";
+}
+#range{
+    flex-grow: 1;
+}
+.edit-progress{
+    display:flex;
+    height:20px; 
+    align-items:center;
+    font-size: 18px;
 }
 .progress{
     flex-grow: 1;
 }
 .progress-cont{
-    height: 20px;
+    height: 30px;
     background-color: rgba(240, 248, 255, 0.132);
     border-radius: 2px;
 }
 .inner-progress-cont{
-    height: 20px;
+    height: 30px;
     background-color: rgba(32, 229, 255, 0.862);
     border-radius: 2px;
 }

@@ -17,9 +17,9 @@ function Experiences(){
     return (<div className='exp' style={{display:hideBox(deleteFlag)}}>
                 <div>
                     <div className='exp-title'>
-                        <TextBox fontsize={28} content={"experience type date"} fontweight={"900"} marginXY='0px 0px'/>
+                        <TextBox fontsize={30} content={"name type date"} fontweight={"600"} marginXY='0px 0px'/>
                     </div>
-                        <TextArea fontsize={18} fontweight={"400"} content={dd} classname={"exp-description"} /> 
+                        <TextArea fontsize={20} fontweight={"400"} content={dd} classname={"exp-description"} /> 
                 </div>
                 <div>
                 <button style={{backgroundColor:"#cc2233" , border:"1px solid white" , padding:"20px 20px", display:'flex'}} onClick={() => {SetDeleteFlag(!deleteFlag)}}>

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import DeleteIcon from './DeleteIcon';
 import EditIcon from './Editicon';
-import './style/SingleexpBoxStyle.css'
+import './style/skillBoxStyle.css'
 
-function SingleexpBox({Name="Name" , progress=60}){
+function SingleexpBox({Name="Name"}){
 
     const [deleteFlag , SetDeleteFlag] = useState(false);
     const [editFlag , SetEditFlag] = useState(false);
@@ -31,16 +31,16 @@ function SingleexpBox({Name="Name" , progress=60}){
 
     return <div className='progress-wrapper' key={Name} style={{display:hideElm(deleteFlag)}}>
                 <div className='progress' style={{display:visible(editFlag)}}>
-                    <h3 className="title" style={{margin:"20px 0px"}} >{p_content}</h3>
+                    <h3 className="skill-title" style={{margin:"20px 0px"}} >{p_content}</h3>
                     <div className="progress-cont">
                         <div className="inner-progress-cont" style={{width:pos+"%"}}></div>
                     </div>
                 </div>
                 <div className='progress' style={{display:visible(!editFlag)}}>
                     <div>
-                        <input type="text" value={inputV} onChange={(e) => {setInputV(e.target.value)}} style={{display:visible(!editFlag) , margin:"20px 0px" , fontSize:"18px" , fontWeight:"bold"} }/>
+                        <input type="text" id='skill-tittle-input' value={inputV} onChange={(e) => {setInputV(e.target.value)}} style={{display:visible(!editFlag)} }/>
                     </div>
-                    <div className="edit-progress" style={{display:'flex' , height:"20px" , alignItems:"center"}}>
+                    <div className="edit-progress">
                         <p style={{margin:"0px 15px"}}>{pos}%</p>
                         <input type="range" min={0} max={100} id="range" onChange={(e) => {setPos(e.target.value)}}/>
                     </div>
