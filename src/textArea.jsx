@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./style/textBoxStyle.css"
-import EditIcon from "./Editicon";
+import ModBtn from "./modifieBtn";
 
 function TextArea({fontsize,content,fontweight,marginXY="10px 0px",classname}){
 
@@ -27,9 +27,7 @@ function TextArea({fontsize,content,fontweight,marginXY="10px 0px",classname}){
         </div>
         <p className={classname} style={{fontSize:fontsize+"px" , fontWeight:fontweight, display:visible(modFlag) , whiteSpace:"pre-wrap"}}>{p_content}</p>
         <div>
-            <button className="editBtn" style={{display:"flex", padding:"7px" , margin:"0px 25px" , backgroundColor:changeBGC(modFlag)}}  onClick={() => {setModFlag(!modFlag);!modFlag ? setInputV(p_content):setP_content(inputV)} }>
-                <EditIcon fontsize={fontsize}/>
-            </button>
+            <ModBtn changeBGC={changeBGC} modFlag={modFlag} setModFlag={setModFlag} setInputV={setInputV} p_content={p_content} setP_content={setP_content} inputV={inputV} fontsize={fontsize}/>
         </div>
     </div>)
 }

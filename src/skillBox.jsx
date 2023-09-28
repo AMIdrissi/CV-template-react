@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import DeleteIcon from './DeleteIcon';
-import EditIcon from './Editicon';
 import './style/skillBoxStyle.css'
 import DeleteBtn from './DeleteButton';
+import ModBtn from './modifieBtn';
 
 function SingleexpBox({Name="Name"}){
 
@@ -47,7 +46,7 @@ function SingleexpBox({Name="Name"}){
                     </div>
                 </div>
                 <div className='Btns'>
-                    <button style={{backgroundColor:changeBGC(editFlag)}} onClick={() => {SetEditFlag(!editFlag);!editFlag ? setInputV(p_content):setP_content(inputV)}}><EditIcon fontsize={16}/></button>
+                    <ModBtn changeBGC={changeBGC} modFlag={editFlag} setModFlag={SetEditFlag} setInputV={setInputV} p_content={p_content} setP_content={setP_content} inputV={inputV} fontsize={16}/>
                     <DeleteBtn deleteFlag={deleteFlag} setdeleteFlag={SetDeleteFlag} fontSize={16} Padding=''/>
                 </div>
             </div>
