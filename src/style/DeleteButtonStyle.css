@@ -1,0 +1,9 @@
+.D-Btn{
+    background-color:#cc2233;
+    display:flex;
+    transition: all 0.3s ease;
+}
+.D-Btn:hover{
+    background-color:#cc2233ee;
+    border:1px solid rgba(255, 255, 255, 0.68) ;
+}

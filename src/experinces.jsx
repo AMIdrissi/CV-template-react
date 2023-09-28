@@ -3,6 +3,7 @@ import DeleteIcon from './DeleteIcon'
 import './style/experincesStyle.css'
 import TextArea from './textArea'
 import TextBox from './textBox'
+import DeleteBtn from './DeleteButton'
 
 const dd = "description : Lorem ipsum\ dolor sit amet consectetur adipisicing elit. Hic ex velit ab illo explicabo! A vitae dolorem molestias hic animi nulla ex perferendis deleniti reprehenderit sint dignissimos, necessitatibus illo explicabo?"
 
@@ -22,9 +23,7 @@ function Experiences(){
                         <TextArea fontsize={20} fontweight={"400"} content={dd} classname={"exp-description"} /> 
                 </div>
                 <div>
-                <button style={{backgroundColor:"#cc2233" , border:"1px solid white" , padding:"20px 20px", display:'flex'}} onClick={() => {SetDeleteFlag(!deleteFlag)}}>
-                    <DeleteIcon fontsize={16}/>
-                </button>
+                    <DeleteBtn deleteFlag={deleteFlag} setdeleteFlag={SetDeleteFlag}/>
                 </div>
             </div>)
 }

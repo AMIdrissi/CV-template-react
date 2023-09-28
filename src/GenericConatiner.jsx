@@ -17,7 +17,7 @@ function GenericConatiner({ListL=[] , ListL2=[] , ListR=[], setLeftindex, setRig
         <div className='wrapper'>
                     <div key="skills" className="left-container" onClick={(e)=>{e.currentTarget.add} }>
                         <div style={{textAlign:"center"}}>
-                            <h2 style={{fontSize:"32px", margin:"0px 28px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>{Ltitle}</h2>
+                            <h2 style={{ color:"#eeeeeee0", fontSize:"32px", margin:"0px 28px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>{Ltitle}</h2>
                         </div>
                             {
                             (ListL).map((skill) => {
@@ -29,7 +29,7 @@ function GenericConatiner({ListL=[] , ListL2=[] , ListR=[], setLeftindex, setRig
                         </div>
                         <div id="2ndLcont" style={{display:enanle2nsCont()}}>
                             <div style={{textAlign:"center"}}>
-                                <h2 style={{fontSize:"32px", margin:"0px 28px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>Hobies</h2>
+                                <h2 style={{ color:"#eeeeeee0", fontSize:"32px", margin:"0px 28px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>Hobies</h2>
                             </div>
                                 {
                                 (ListL2).map((skill) => {
@@ -44,7 +44,7 @@ function GenericConatiner({ListL=[] , ListL2=[] , ListR=[], setLeftindex, setRig
                     
                     <div className="right-container">
                         <div style={{textAlign:"center"}}>
-                            <h2 style={{fontSize:"32px", margin:"0px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>{Rtitle}</h2>
+                            <h2 style={{ color:"#eeeeeee0", fontSize:"32px", margin:"0px" , padding:"27px 0px" , backgroundColor:"#eeeeee12" , border:"1px solid #eeeeee10" , borderRight:"0px"}}>{Rtitle}</h2>
                         </div>
                             {(ListR).map((exp) => {
                                 return exp
