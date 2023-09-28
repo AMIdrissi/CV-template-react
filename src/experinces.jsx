@@ -18,7 +18,7 @@ function Experiences(){
     return (<div className='exp' style={{display:hideBox(deleteFlag)}}>
                 <div>
                     <div className='exp-title'>
-                        <TextBox fontsize={30} content={"name type date"} fontweight={"600"} marginXY='0px 0px'/>
+                        <TextBox fontsize={30} content={"name type date"} fontweight={"600"} marginXY='0px 15px 0px 0px'/>
                     </div>
                         <TextArea fontsize={20} fontweight={"400"} content={dd} classname={"exp-description"} /> 
                 </div>
